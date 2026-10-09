@@ -1,0 +1,5 @@
+C:\Users\NewUser\RiderProjects\MemoryCleaner\bin\Release\MemoryCleaner.exe
+C:\Users\NewUser\RiderProjects\MemoryCleaner\obj\Release\MemoryCleaner.csproj.AssemblyReference.cache
+C:\Users\NewUser\RiderProjects\MemoryCleaner\obj\Release\MemoryCleaner.csproj.CoreCompileInputs.cache
+C:\Users\NewUser\RiderProjects\MemoryCleaner\obj\Release\MemoryCleaner.exe
+C:\Users\NewUser\RiderProjects\MemoryCleaner\bin\Release\help.txt

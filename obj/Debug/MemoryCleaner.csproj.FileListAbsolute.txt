@@ -1,0 +1,6 @@
+C:\Users\NewUser\RiderProjects\MemoryCleaner\bin\Debug\MemoryCleaner.exe
+C:\Users\NewUser\RiderProjects\MemoryCleaner\bin\Debug\MemoryCleaner.pdb
+C:\Users\NewUser\RiderProjects\MemoryCleaner\obj\Debug\MemoryCleaner.csproj.AssemblyReference.cache
+C:\Users\NewUser\RiderProjects\MemoryCleaner\obj\Debug\MemoryCleaner.csproj.CoreCompileInputs.cache
+C:\Users\NewUser\RiderProjects\MemoryCleaner\obj\Debug\MemoryCleaner.exe
+C:\Users\NewUser\RiderProjects\MemoryCleaner\obj\Debug\MemoryCleaner.pdb

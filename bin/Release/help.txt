@@ -1,0 +1,88 @@
+MEMORY CLEANER — HELP
+====================
+
+OVERVIEW
+--------
+MemoryCleaner is a Windows command-line utility that runs selected memory-cleaning
+operations and exits. Run it with no arguments to run all operations, or specify one
+or more arguments to run only the requested operations.
+
+USAGE
+-----
+MemoryCleaner.exe [argument ...]
+
+RUN ALL OPERATIONS
+------------------
+MemoryCleaner.exe
+MemoryCleaner.exe /all
+
+With no arguments, MemoryCleaner runs all eight memory-area operations and its
+Garbage Collector step.
+
+SELECT INDIVIDUAL OPERATIONS
+----------------------------
+Argument                    Short alias     Operation
+---------                   -----------     ---------
+/CombinedPageList           /cpl            Combined Page List
+/ModifiedFileCache          /mfc            Modified File Cache
+/ModifiedPageList           /mpl            Modified Page List
+/RegistryCache              /rc             Registry Cache
+/StandbyList                /sl             Standby List
+/StandbyListLowPriority     /slp            Standby List (Low Priority)
+/SystemFileCache            /syscache       System File Cache
+/WorkingSet                 /ws             Working Set
+
+The arguments are case-insensitive. The program also accepts a leading hyphen,
+for example -ws, where the corresponding slash form is supported.
+
+EXAMPLES
+--------
+Run all operations:
+  MemoryCleaner.exe
+
+Run Working Set only:
+  MemoryCleaner.exe /ws
+
+Run System File Cache only:
+  MemoryCleaner.exe /syscache
+
+Run Standby List and Modified Page List:
+  MemoryCleaner.exe /sl /mpl
+
+Run Combined Page List, Registry Cache, and Working Set:
+  MemoryCleaner.exe /cpl /rc /ws
+
+Run all operations using the explicit alias:
+  MemoryCleaner.exe /all
+
+BEHAVIOUR
+--------
+- When one or more individual operation arguments are supplied, only those selected
+  memory-area operations are requested.
+- The Garbage Collector step is included in the no-argument full run. It is not
+  automatically added to an individual-operation run.
+- Failures are recorded in the log. For runs using explicit operation arguments, the
+  program returns a non-zero exit code if a selected operation fails or an argument
+  is unknown. In the current no-argument full-run path, individual failures are logged,
+  but the process may still return 0.
+- Administrative privileges may be required. When launched without the required
+  privileges, the application can request elevation through the Windows UAC prompt.
+  A scheduled task configured to run as SYSTEM does not need that prompt.
+
+LOG FILE
+--------
+The application log is normally stored at:
+  C:\ProgramData\MemoryCleaner\MemoryCleaner.log
+
+The log records successful operations, individual operation failures, and unexpected
+application errors. If logging itself fails, the application may not be able to record
+that event.
+
+
+IMPORTANT
+---------
+Do not use /sfc as an alias: the System File Cache alias is /syscache to avoid confusion
+with the Windows System File Checker command (sfc /scannow).
+
+This help file documents the command-line interface; it does not itself execute the
+program or install the scheduled task.
