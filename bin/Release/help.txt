@@ -29,7 +29,7 @@ Argument                    Short alias     Operation
 /RegistryCache              /rc             Registry Cache
 /StandbyList                /sl             Standby List
 /StandbyListLowPriority     /slp            Standby List (Low Priority)
-/SystemFileCache            /syscache       System File Cache
+/SystemFileCache            /sc       System File Cache
 /WorkingSet                 /ws             Working Set
 
 The arguments are case-insensitive. The program also accepts a leading hyphen,
